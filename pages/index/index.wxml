@@ -1,18 +1,11 @@
 <!--index.wxml-->
-<container hideHeader="{{false}}" padding="{{false}}" headerBg="#ffffff" footerBg="#eeeeee" textColor="#ffffff" title="标题标题">
-  <view slot="content" class='content'>
-    <button bindtap='onGoto' id="the-id">home</button>
-
-    <!-- <view class="card" wx:for="{{list}}" wx:key="index">
-        <view class="img-con">
-            <image src="{{item.image}}"></image>
-        </view>
-        <view class="txt-con">
-            <text class="main-title">{{item.mainT}}</text>
-            <text class="sub-title">{{item.subT}}</text>
-        </view>
-    </view> -->
-  </view>
-  <view slot="footer" class="footer">
-  </view>
+<container custom hasFooter padding="{{false}}" headerBg="#ffffff" footerBg="#cccccc" textColor="#ffffff" title="标题标题">
+    <view slot="content" class='content'>
+        <button bindtap='onGoto' id="the-id">home</button>
+        <view style="flex: 1;"></view>
+        <text class="footer-text">footer-text</text>
+    </view>
+    <view slot="footer" class="footer">
+        footer-label
+    </view>
 </container>

@@ -7,29 +7,36 @@ Component({
      * 组件的属性列表
      */
     properties: {
-        hideHeader: {
+        custom: {
             type: Boolean,
-            value: true,
+            value: false,
         },
-        headerBg: {
+        /* vvvvvv头部配置vvvvvv */
+        headerBg: {     // 头部底色
             type: String,
             value: '#ffffff',
         },
-        footerBg: {
-            type: String,
-            value: '#ffffff',
-        },
-        padding: {
+        padding: {      // 是否一直显示标题 false:滚动时显示 true:一直显示
             type: Boolean,
             value: true,
         },
-        textColor: {
+        textColor: {    // 头部标题颜色
             type: String,
             value: '',
         },
-        title: {
+        title: {        // 头部标题文字
             type: String,
             value: '',
+        },
+        /* ^^^^^^头部配置^^^^^^ */
+
+        hasFooter: {    // 是否有底部
+            type: Boolean,
+            value: false,
+        },
+        footerBg: {     // 底部底色
+            type: String,
+            value: '#ffffff',
         },
     },
 
@@ -91,6 +98,7 @@ Component({
         wx.createIntersectionObserver(this, {
             thresholds: [0, 0.2, 0.4, 0.6, 0.8, 1],
         }).relativeTo('.target-block').relativeToViewport().observe('.comp-header', (res) => {
+            console.log(res.intersectionRatio);
             if (res.boundingClientRect.top < 0) return;
             let lastTextColor;
             if (background === 'dark') {
