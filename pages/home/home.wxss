@@ -1,0 +1,6 @@
+/* pages/home/home.wxss */
+.content {
+  height: 4000rpx;
+  width: 100%;
+  background: red;
+}

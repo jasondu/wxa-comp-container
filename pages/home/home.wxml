@@ -1,0 +1,5 @@
+<!--pages/home/home.wxml-->
+<container hideHeader="{{false}}" padding="{{true}}" headerBg="#ffffff" title="标题标题">
+  <view slot="content" class='content'>11111</view>
+</container>
+

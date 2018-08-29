@@ -1,0 +1,24 @@
+<!--components/container/index.wxml-->
+<view class='comp-container'>
+    <!-- 头部 -->
+    <view wx:if="{{!hideHeader}}" class='comp-header' style='height: {{headerHeight}}rpx;padding-top: {{headerHeight - 85}}rpx;'>
+        <view class='bg' style='opacity: {{headerOpacity}}; background: {{headerBg}};'></view>
+        <view class='comp-left'>
+            <button bindtap='onBack' class='button back-btn' hover-class='button-hover' wx:if="{{showBackBtn}}">
+                <view class="comp-icon {{textColor === '#000000' ? 'comp-icon-dark-back' : 'comp-icon-light-back'}}"></view>
+            </button>
+        </view>
+        <button class='button comp-middle' hover-class='button-hover' style='color: {{textColor}};'>{{title}}</button>
+        <view class='comp-right'></view>
+    </view>
+    <!-- 内容区域 -->
+    <view class='content'>
+        <view wx:if="{{!hideHeader}}" class='comp-target-block-label' style="{{!padding ? 'padding-top: ' + headerHeight + 'rpx;': ''}}">
+            <view class='target-block'></view>
+        </view>
+        <slot name="content"></slot>
+        <view class="comp-footer" style="background: {{footerBg}};{{iphonex ? 'padding-bottom: 68rpx;' : ''}};">
+            <slot name="footer"></slot>
+        </view>
+    </view>
+</view>

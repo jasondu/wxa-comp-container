@@ -1,0 +1,38 @@
+/**index.wxss**/
+.content {
+  height: 4000rpx;
+  width: 100%;
+  background: yellowgreen;
+  padding-top: 200rpx;
+}
+
+.card {
+    width: 700rpx;
+    height: 500rpx;
+    margin: 0 auto;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+}
+.card .img-con {
+    width: 700rpx;
+    height: 350rpx;
+    background: #eee;
+}
+.card .txt-con {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20rpx;
+}
+.card .main-title {
+    font-size: 30rpx;
+}
+
+.footer {
+    width: 100%;
+    height: 200rpx;
+    background: #eee;
+    border-bottom: 1rpx solid;
+}

@@ -1,0 +1,112 @@
+/* components/container/index.wxss */
+.comp-container {
+  min-height: 100vh;
+}
+
+.comp-container .content {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.comp-container .comp-target-block-label {
+  z-index: -100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.comp-container .comp-target-block-label .target-block {
+  height: 100%;
+  width: 100%;
+  background: red;
+  opacity: 0;
+}
+
+.comp-container .comp-header {
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.comp-container .comp-header .bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.comp-container .comp-header .comp-left,
+.comp-container .comp-header .comp-middle,
+.comp-container .comp-header .comp-right {
+  flex: 1;
+}
+
+.comp-container .comp-header .comp-middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comp-container .comp-header .button::before,
+.comp-container .comp-header .button::after {
+  display: none;
+}
+
+.comp-container .comp-header .comp-left {
+  padding-left: 8rpx;
+  box-sizing: border-box;
+}
+
+.comp-container .comp-header .button {
+  padding: 0;
+  background: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.comp-container .comp-header .button-hover {
+  background: none;
+  opacity: 0.6;
+}
+
+.comp-container .comp-header .back-btn {
+  width: 130rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.comp-container .comp-footer {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+.comp-container .comp-icon {
+  width: 44rpx;
+  height: 44rpx;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+.comp-container .comp-icon-dark-back {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAXVBMVEUAAAArKysrKysgICArKysmJiYrKysrKysrKysrKysrKysqKiosLCwsLCwrKysrKysrKysrKysqKiopKSkkJCQsLCwrKysrKyssLCwsLCwrKyssLCwqKiorKyssLCyOoy/7AAAAHnRSTlMA+fQIOw3JvU5CSDfX0s7DuBJUMRXgrYIpHZmYWlmLGsbpAAAAqklEQVRYw+3XSQ6DMBBEUWIcm5CJTGSu+x+TBfIBqLLkBtH79yVGq6t1powPLr4Ef90AcG/NA0/WN6PHV/T4i74XfVdTvrXiYxm/y+XP8/Q++UB6l/y2rD9xfm/FH1V/ofwtlz9wvn4kfycPIMITAeISyJuoP0a9oL/K4sdUruDzFUKWgv5bFw+WRRQiW2gtFTq20Fgq9JVa+InrAj76wsEXkFYebelax+IMNoUwBEYHj+oAAAAASUVORK5CYII=);
+}
+
+.comp-container .comp-icon-light-back {
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAXVBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////9RKvvlAAAAHnRSTlMA8wr4/DvJvU5CBkg319LOw7gSD1QxFeCtmYJZKR2UKCKZAAAAsklEQVRYw+3XWQ6DMAxFUULL0HluoYD3v0yEEPzzbiQCwv/nSQyJ7WirKZWkLquBf+/NzDXMm/1Vn/feSuitgr6A/nGU/In6nSefUR9L/uDL35fpk8GnoneB+Jvmz6N/zeuv1D8l//HlL5qPf4P/ig0IeBAAHgG8RPAZQQL4lcFh4gn8QuFXGk/g1zpsLKtI6No7HzD4iIOHNK3ykBKKCA/bcF2wki8cekLnXYOXrq1CrBYUnDEUjAoLjAAAAABJRU5ErkJggg==);
+}
